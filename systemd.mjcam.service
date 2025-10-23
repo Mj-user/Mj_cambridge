@@ -1,0 +1,12 @@
+[Unit]
+Description=MJ Home Camera Bridge
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/mj-home-camera-bridge
+ExecStart=/usr/bin/python3 /home/pi/mj-home-camera-bridge/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
